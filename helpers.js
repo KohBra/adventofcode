@@ -12,4 +12,11 @@ export const arrUnique = arr => arr.reduce((carry, element) => {
     return carry
 }, [])
 
+export const indexData = (arr, key) => arr.reduce((obj, row) => {
+    obj[row[key]] = row
+    return obj
+}, {})
+
 export const arrSum = arr => arr.reduce((count, value) => count + value)
+export const arrMin = arr => arr.reduce((min, value) => value < min ? value : min)
+export const arrMax = arr => arr.reduce((max, value) => value > max ? value : max)
